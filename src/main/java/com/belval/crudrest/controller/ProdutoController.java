@@ -28,13 +28,13 @@ public class ProdutoController {
 //		listaProdutos.add(prod);
 	}
 	
+	
 	@GetMapping("/produtos")
 	public ResponseEntity<List<Produto>> obterProdutos() {
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(repository.findAll());
 	}
-
 	//curl POST http://localhost:8080/produtos -H "Content-Type: application/json; Charset=utf-8" -d @produto-mortadela.json
 	
 	@PostMapping("/produtos")
